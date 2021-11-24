@@ -1,0 +1,24 @@
+﻿@model IEnumerable<doan.Models.NhanVienModel>
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Xóa</h2>
+<form acton="/NhanVien/Delete" method="post">
+    <div class="form-group">
+        <label>Mã Nhân Viên</label>
+        <input type="hidden" class="from-control" id="maNV" name="maNV" disabled />
+    </div>
+    <div class="form-group">
+        <label>Tên Nhân Viên</label>
+        <input type="text" class="from-control" id="tenNV" name="tenNV" />
+    </div>
+    <div class="form-group">
+        <label>Địa Chỉ</label>
+        <input type="text" class="from-control" id="diaChi" name="diaChi" />
+    </div>
+    <button class="btn btn-primary" type="submit">Lưu</button>
+</form>
+
+

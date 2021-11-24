@@ -1,0 +1,63 @@
+﻿@model IEnumerable<doan.Models.NhanVienModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách nhân viên</h2>
+<form acton="/NhanVien/Index" method="post">
+    <a href="/NhanVien/Create" class="btn btn primary">Thêm mới</a>
+</form>
+<table class="table table-bordered">
+    <thread>
+        <tr>
+            <td>Mã nhân viên</td>
+            <td>Tên nhân viên</td>
+            <td>Giới tính</td>
+            <td>Ngày Sinh</td>
+            <td>Địa chỉ</td>
+            <td>SDT</td>
+            <td>CCCD</td>
+            <td>Ngày Vào Làm</td>
+            <td>Chức vụ</td>
+            <td>Lương</td>
+            <td>
+
+                <a href="/NhanVien/Edit" class="btn btn primary">Sửa</a>
+            </td>
+            <td> <a href="/NhanVien/Delete" class="btn btn primary">Xóa</a></td>
+
+
+
+        </tr>
+    </thread>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.maNV</td>
+            <td>@item.tenNV</td>
+            <td>@item.gioiTinh</td>
+            <td>@item.ngaySinh</td>
+            <td>@item.diaChi</td>
+            <td>@item.sDT</td>
+            <td>@item.cccd</td>
+            <td>@item.ngayVaoLam</td>
+            <td>@item.chucVu</td>
+            <td>@item.luong</td>
+
+
+            <td>
+
+                <a href="/NhanVien/Edit?maNV=@item.maNV">Sửa</a>
+            </td>
+            <td><a href="/NhanVien/Delete?maNV=@item.maNV">Xóa</a></td>
+
+
+
+        </tr>
+        }
+    </tbody>
+</table>
+
+

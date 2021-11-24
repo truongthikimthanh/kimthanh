@@ -1,0 +1,50 @@
+﻿@model IEnumerable<doan.Models.SanPhamModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách Sản Phẩm</h2>
+<form acton="/SanPham/Index" method="post">
+    <a href="/SanPham/Create" class="btn btn primary">Thêm mới</a>
+</form>
+<table class="table table-bordered">
+    <thread>
+        <tr>
+            <td>Mã sản phẩm</td>
+            <td>Tên sản phẩm</td>
+            <td>Giá</td>
+            
+            <td>
+
+                <a href="/SanPham/Edit" class="btn btn primary">Sửa</a>
+            </td>
+            <td> <a href="/SanPham/Delete" class="btn btn primary">Xóa</a></td>
+
+
+
+        </tr>
+    </thread>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.maSP</td>
+                <td>@item.tenSP</td>
+                <td>@item.gia</td>
+                
+
+
+                <td>
+
+                    <a href="/SanPham/Edit?maSP=@item.maSP">Sửa</a>
+                </td>
+                <td><a href="/SanPham/Delete?maSP=@item.maSP">Xóa</a></td>
+
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+

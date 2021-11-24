@@ -1,0 +1,50 @@
+﻿@model doan.Models.NhanVienModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thêm mới</h2>
+<form acton="~/NhanVien/Create" method="post">
+    <div class="form-group">
+        <label>Mã Nhân Viên</label>
+        <input type="text" class="from-control" id="maNV" name="maNV" disabled />
+    </div>
+    <div class="form-group">
+        <label>Tên Nhân Viên</label>
+        <input type="text" class="from-control" id="tenNV" name="tenNV" />
+    </div>
+    <div class="form-group">
+        <label>Giới tính</label>
+        <input type="text" class="from-control" id="gioiTinh" name="gioiTinh" />
+    </div>
+    <div class="form-group">
+        <label>Ngày sinh</label>
+        <input type="date" class="from-control" id="ngaySinh" name="ngaySinh" />
+    </div>
+    <div class="form-group">
+        <label>Địa Chỉ</label>
+        <input type="text" class="from-control" id="diaChi" name="diaChi" />
+    </div>
+    <div class="form-group">
+        <label>SDT</label>
+        <input type="text" class="from-control" id="sDT" name="sDT" />
+    </div>
+    <div class="form-group">
+        <label>CCCD</label>
+        <input type="text" class="from-control" id="cccd" name="cccd" />
+    </div>
+    <div class="form-group">
+        <label>Ngày Vào Làm</label>
+        <input type="date" class="from-control" id="ngayVaoLam" name="ngayVaoLam" />
+    </div>
+    <div class="form-group">
+        <label>Chức vụ</label>
+        <input type="text" class="from-control" id="chucVu" name="chucVu" />
+    </div>
+    <div class="form-group">
+        <label>Lương</label>
+        <input type="text" class="from-control" id="luong" name="luong" />
+    </div>
+    <button class="btn btn-primary" input type="submit">Lưu</button>
+</form>

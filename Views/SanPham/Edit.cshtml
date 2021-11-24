@@ -1,0 +1,35 @@
+﻿@model doan.Models.SanPhamModel
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sửa sản phẩm</h2>
+<form acton="/ThanhVien/Edit" method="post">
+    <div class="form-group">
+        <label>Mã Sản Phẩm</label>
+        <input type="hidden" class="from-control" value="@Model.maSP" id="maSP" name="maSP" />
+    </div>
+    <div class="form-group">
+        <label>Tên Sản Phẩm</label>
+        <input type="text" class="from-control" value=" @Model.tenSP" id="tenSP" name="tenSP" />
+    </div>
+    <div class="form-group">
+        <label>Giá</label>
+        <input type="text" class="from-control" value="@Model.gia" id="gia" name="gia" />
+    </div>
+    
+
+    <div class="form-group ">
+        <input type="submit" value="Lưu" class="btn btn-primary" />
+    </div>
+
+</form>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+

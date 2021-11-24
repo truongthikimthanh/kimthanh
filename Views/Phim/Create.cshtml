@@ -1,0 +1,59 @@
+﻿@model doan.Models.PhimModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thêm Phim</h2>
+<form acton="~/Phim/Create" method="post">
+    <div class="form-group">
+        <label>Mã Phim</label>
+        <input type="hidden" class="from-control"  id="maPhim" name="maPhim" />
+    </div>
+    <div class="form-group">
+        <label>Tên Phim</label>
+        <input type="text" class="from-control"   id="tenPhim" name="tenPhim" />
+    </div>
+    <div class="form-group">
+        <label>Thời lượng</label>
+        <input type="text" class="from-control"id="thoiLuong" name="thoiLuong" />
+    </div>
+    <div class="form-group">
+        <label>Ngôn Ngữ</label>
+        <input type="text" class="from-control"  id="ngonNgu" name="ngonNgu" />
+    </div>
+    <div class="form-group">
+        <label>Thể Loại</label>
+        <input type="text" class="from-control"  id="theLoai" name="theLoai" />
+    </div>
+    <div class="form-group">
+        <label>Đạo diễn</label>
+        <input type="text" class="from-control"  id="daoDien" name="daoDien" />
+    </div>
+    <div class="form-group">
+        <label>Diễn Viên</label>
+        <input type="text" class="from-control"  id="dienVien" name="dienVien" />
+    </div>
+    <div class="form-group">
+        <label>Mô tả</label>
+        <input type="date" class="from-control"id="moTa" name="moTa" />
+    </div>
+    <div class="form-group">
+        <label>Độ Tuổi</label>
+        <input type="text" class="from-control" id="doTuoi" name="doTuoi" />
+    </div>
+    
+    <div class="form-group ">
+        <input type="submit" value="Lưu" class="btn btn-primary" />
+    </div>
+
+</form>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<doan.Models.ThanhVienModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách Thành viên</h2>
+<form acton="/ThanhVien/Index" method="post">
+    <a href="/ThanhVien/Create" class="btn btn primary">Thêm mới</a>
+</form>
+<table class="table table-bordered">
+    <thread>
+        <tr>
+            <td>Mã thành viên</td>
+            <td>Tên thành viên</td>
+            <td>Giới tính</td>
+            <td>Ngày Sinh</td>
+            <td>Địa chỉ</td>
+            <td>SDT</td>
+            <td>CCCD</td>
+            <td>Ngày đăng ký</td>
+            <td>Điểm tích lũy</td>
+            <td>Loại tài khoản</td>
+            <td>Email</td>
+            <td>
+
+                <a href="/ThanhVien/Edit" class="btn btn primary">Sửa</a>
+            </td>
+            <td> <a href="/ThanhVien/Delete" class="btn btn primary">Xóa</a></td>
+
+
+
+        </tr>
+    </thread>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.maTV</td>
+            <td>@item.tenTV</td>
+            <td>@item.gioiTinh</td>
+            <td>@item.ngaySinh</td>
+            <td>@item.diaChi</td>
+            <td>@item.sDT</td>
+            <td>@item.cccd</td>
+            <td>@item.ngayDangKy</td>
+            <td>@item.diemTichLuy</td>
+            <td>@item.loaiTK</td>
+            <td>@item.email</td>
+
+
+            <td>
+
+                <a href="/ThanhVien/Edit?maTV=@item.maTV">Sửa</a>
+            </td>
+            <td><a href="/ThanhVien/Delete?maTV=@item.maTV">Xóa</a></td>
+
+
+
+        </tr>
+        }
+    </tbody>
+</table>
+
+

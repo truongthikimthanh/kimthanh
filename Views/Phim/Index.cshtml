@@ -1,0 +1,59 @@
+﻿@model IEnumerable<doan.Models.PhimModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Danh sách Phim</h2>
+<form acton="/Phim/Index" method="post">
+    <a href="/Phim/Create" class="btn btn primary">Thêm mới</a>
+</form>
+<table class="table table-bordered">
+    <thread>
+        <tr>
+            <td>Mã phim</td>
+            <td>Tên phim</td>
+            <td>Thời lượng</td>
+            <td>Ngôn Ngữ</td>
+            <td>Thể Loại</td>
+            <td>Đạo diễn</td>
+            <td>Diễn Viên</td>
+            <td>Mô tả</td>
+
+            <td>
+
+                <a href="/Phim/Edit" class="btn btn primary">Sửa</a>
+            </td>
+            <td> <a href="/Phim/Delete" class="btn btn primary">Xóa</a></td>
+
+
+
+        </tr>
+    </thread>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.maPhim</td>
+            <td>@item.tenPhim</td>
+            <td>@item.thoiLuong</td>
+            <td>@item.ngonNgu</td>
+            <td>@item.theLoai</td>
+            <td>@item.daoDien</td>
+            <td>@item.dienVien</td>
+            <td>@item.moTa</td>
+
+
+            <td>
+
+                <a href="/Phim/Edit?maPhim=@item.maPhim">Sửa</a>
+            </td>
+            <td><a href="/Phim/Delete?maPhim=@item.maPhim">Xóa</a></td>
+
+
+
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<doan.Models.SanPhamModel>
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thêm mới</h2>
+<form acton="/SanPham/Create" method="post">
+    <div class="form-group">
+        <label>Mã Sản Phẩm</label>
+        <input type="text" class="from-control" id="maSP" name="maSP" disabled />
+    </div>
+    <div class="form-group">
+        <label>Tên Sản Phẩm</label>
+        <input type="text" class="from-control" id="tenSP" name="tenSP" />
+    </div>
+    <div class="form-group">
+        <label>Giá</label>
+        <input type="text" class="from-control" id="gia" name="gia" />
+    </div>
+
+    <a href="/SanPham"><input type="submit" class="button" value="Lưu"> </a>
+</form>
+
+
+

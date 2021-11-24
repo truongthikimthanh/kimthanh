@@ -1,0 +1,52 @@
+﻿@model doan.Models.NhanVienModel
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sửa nhân viên</h2>
+<form acton="/NhanVien/Edit" method="get">
+    <div class="form-group">
+        <label>Mã Nhân Viên</label>
+        <input type="hidden" class="from-control" value="@Model.maNV" id="maNV" name="maNV" />
+    </div>
+    <div class="form-group">
+        <label>Tên Nhân Viên</label>
+        <input type="text" class="from-control" value=" @Model.tenNV" id="tenNV" name="tenNV" />
+    </div>
+    <div class="form-group">
+        <label>Giới tính</label>
+        <input type="text" class="from-control" value="@Model.gioiTinh"id="gioiTinh" name="gioiTinh" />
+    </div>
+    <div class="form-group">
+        <label>Ngày sinh</label>
+        <input type="date" class="from-control" value="@Model.ngaySinh" id="ngaySinh" name="ngaySinh" />
+    </div>
+    <div class="form-group">
+        <label>Địa Chỉ</label>
+        <input type="text" class="from-control" value="@Model.diaChi" id="diaChi" name="diaChi" />
+    </div>
+    <div class="form-group">
+        <label>SDT</label>
+        <input type="text" class="from-control" value="@Model.sDT." id="sDT" name="sDT" />
+    </div>
+    <div class="form-group">
+        <label>CCCD</label>
+        <input type="text" class="from-control" value="@Model.cccd" id="cccd" name="cccd" />
+    </div>
+    <div class="form-group">
+        <label>Ngày Vào Làm</label>
+        <input type="date" class="from-control" value="@Model.ngayVaoLam" id="ngayVaoLam" name="ngayVaoLam" />
+    </div>
+    <div class="form-group">
+        <label>Chức vụ</label>
+        <input type="text" class="from-control" value="@Model.chucVu" id="chucVu" name="chucVu" />
+    </div>
+    <div class="form-group">
+        <label>Lương</label>
+        <input type="text" class="from-control" value="@Model.luong" id="luong" name="luong" />
+    </div>
+    <button class="btn btn-primary" input type="submit">Lưu</button>
+</form>
+
+
